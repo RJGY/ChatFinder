@@ -1,0 +1,16 @@
+[
+{
+  "modid": "chatfind",
+  "name": "ChatFind",
+  "description": "Find messages in chat with regex or literal strings.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://www.github.com/RJGY",
+  "updateUrl": "",
+  "authorList": ["RJGY"],
+  "credits": "Only me",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
