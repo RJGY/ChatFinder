@@ -12,20 +12,16 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
-@Mod(modid = ChatFind.MOD_ID, version = ChatFind.VERSION, name = ChatFind.NAME)
+@Mod(modid = ChatFind.MOD_ID, version = ChatFind.VERSION, name = ChatFind.NAME, clientSideOnly = true)
 public class ChatFind {
     public static final String MOD_ID = "chatfind";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.1";
     public static final String NAME = "ChatFind";
     public static final String SERVER_PROXY_CLASS = "com.RJGY.chatfind.proxy.CommonProxy";
     public static final String CLIENT_PROXY_CLASS = "com.RJGY.chatfind.proxy.ClientProxy";
-    private static final Logger log = LogManager.getLogger();
 
     @SidedProxy(serverSide = SERVER_PROXY_CLASS, clientSide = CLIENT_PROXY_CLASS)
     public static CommonProxy proxy;
-
-    @Mod.Instance("chatfind")
-    public static ChatFind instance;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

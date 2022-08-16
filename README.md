@@ -1,5 +1,5 @@
 # ChatFind Minecraft Mod
-Minecraft Forge 1.8.9 mod for my friend to find specifc phrases in the chat
+Minecraft Forge 1.8.9 mod for my friend to find specific phrases in the chat and move them to the top of the screen, similar to a kill feed in shooter games such as CSGO and Valorant.
 
 ## How to use
 1. Place ChatFind mod from releases in downloads folder.
@@ -12,12 +12,14 @@ Minecraft Forge 1.8.9 mod for my friend to find specifc phrases in the chat
 
 ## Editting the Config File
 * Add/Remove/Change regex phrases after the "=" sign.
+* Change delay by changing the delay value to a number in milliseconds. 5000 milliseconds is 5 seconds. 5 milliseconds is 0.005 seconds.
 * Separate them with commas (,) only. DO NOT include spaces.
 
 ## Keybinds
-P - Clears screen of messages. This cannot be changed at the moment.
+P - Clears screen of messages. This cannot be changed at the moment.   
+O - Reloads config file
 
 ## What it looks like
 
 
-## Suggest stuff in issues if you want more features or something idk
+## Suggest stuff in issues if you want more features or some other request. Contact me on Discord @ Madge#4867

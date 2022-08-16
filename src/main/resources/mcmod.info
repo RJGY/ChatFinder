@@ -2,13 +2,13 @@
 {
   "modid": "chatfind",
   "name": "ChatFind",
-  "description": "Find messages in chat with regex or literal strings.",
+  "description": "Find messages in chat with regex or literal strings and places them at the top of the screen for a short amount of time. Simulates a kill feed similar to CSGO and Valorant. Ask for more features over at my GitHub or contact me on Discord at Madge#4867",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://www.github.com/RJGY",
   "updateUrl": "",
   "authorList": ["RJGY"],
-  "credits": "Only me",
+  "credits": "RJGY",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

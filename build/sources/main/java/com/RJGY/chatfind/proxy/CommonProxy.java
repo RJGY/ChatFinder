@@ -10,7 +10,7 @@ public class CommonProxy {
 
     }
 
-    public void registerEvents() throws IOException {
+    public void registerEvents() {
 
     }
 }
