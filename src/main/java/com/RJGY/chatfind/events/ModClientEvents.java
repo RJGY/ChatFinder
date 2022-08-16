@@ -45,11 +45,6 @@ public class ModClientEvents {
     }
 
     @SubscribeEvent
-    public void onExit(PlayerEvent.PlayerChangedDimensionEvent event) {
-        dictionary.clear();
-    }
-
-    @SubscribeEvent
     public void reloadConfig(InputEvent.KeyInputEvent event) {
         if (Keyboard.isKeyDown(Keyboard.KEY_O))
             loadRegex();

@@ -1,16 +1,13 @@
 package com.RJGY.chatfind.events;
 
-import javafx.util.Pair;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
-import net.minecraftforge.fml.common.event.FMLServerStoppedEvent;
-import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import org.lwjgl.input.Keyboard;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
-import net.minecraftforge.event.ServerChatEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -20,15 +17,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 
 public class ModClientEvents {
-    private ArrayList<String> stringRegexList = new ArrayList<>();
-    private HashMap<Long, String> dictionary = new HashMap<>();
+    private final ArrayList<String> stringRegexList = new ArrayList<>();
+    private final HashMap<Long, String> dictionary = new HashMap<>();
     private static final Logger log = LogManager.getLogger();
     private int delay = 0;
 
@@ -47,11 +42,6 @@ public class ModClientEvents {
     public void clearMessageList(InputEvent.KeyInputEvent event) {
         if (Keyboard.isKeyDown(Keyboard.KEY_P))
             dictionary.clear();
-    }
-
-    @SubscribeEvent
-    public void onExit(FMLServerStoppingEvent event) {
-        dictionary.clear();
     }
 
     @SubscribeEvent
