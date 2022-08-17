@@ -15,9 +15,9 @@ Minecraft Forge 1.8.9 mod for my friend to find specific phrases in the chat and
 * Change delay by changing the delay value to a number in milliseconds. 5000 milliseconds is 5 seconds. 5 milliseconds is 0.005 seconds.
 * Separate them with commas (,) only. DO NOT include spaces.
 
-## Keybinds
-P - Clears screen of messages. This cannot be changed at the moment.   
-O - Reloads config file
+## Default Keybinds
+P - Clears screen of messages. 
+O - Reloads config file.
 
 ## What it looks like
 

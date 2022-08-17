@@ -26,6 +26,8 @@ public class ModClientEvents {
     private final HashMap<Long, String> dictionary = new HashMap<>();
     private static final Logger log = LogManager.getLogger();
     private int delay = 0;
+    private int clearButton = Keyboard.KEY_P;
+    private int reloadButton = Keyboard.KEY_O;
 
     public void loadRegex() {
         File configFile = new File(Loader.instance().getConfigDir(), "chatfind.cfg");
@@ -33,20 +35,30 @@ public class ModClientEvents {
         config.load();
         Property update = config.get("ChatFind", "regex", "hello");
         Property delayTime = config.get("ChatFind", "delay", "5000");
+        Property clear = config.get("ChatFind", "clear", "KEY_O");
+        Property reload = config.get("ChatFind", "reload", "KEY_P");
         config.save();
         stringRegexList.addAll(Arrays.asList(update.getString().split(",")));
         delay = delayTime.getInt();
+        clearButton = Keyboard.getKeyIndex(clear.getString());
+        reloadButton = Keyboard.getKeyIndex(reload.getString());
+        if (reloadButton == 0) {
+            reloadButton = Keyboard.KEY_O;
+        }
+        if (clearButton == 0) {
+            clearButton = Keyboard.KEY_P;
+        }
     }
 
     @SubscribeEvent
     public void clearMessageList(InputEvent.KeyInputEvent event) {
-        if (Keyboard.isKeyDown(Keyboard.KEY_P))
+        if (Keyboard.isKeyDown(clearButton))
             dictionary.clear();
     }
 
     @SubscribeEvent
     public void reloadConfig(InputEvent.KeyInputEvent event) {
-        if (Keyboard.isKeyDown(Keyboard.KEY_O))
+        if (Keyboard.isKeyDown(reloadButton))
             loadRegex();
     }
 
